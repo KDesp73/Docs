@@ -21,5 +21,6 @@ public static void main(String args[]){
 
 ## Links
 
-* [My Portfolio](https://users.iee.ihu.gr/~iee2021035/my-portfolio/)
+* [First Portfolio](https://kdesp73.github.io/My-Portfolio/)
+* [Second Portfolio](https://users.iee.ihu.gr/~iee2021035/my-portfolio/)
 

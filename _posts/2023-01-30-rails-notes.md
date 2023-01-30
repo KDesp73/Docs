@@ -5,8 +5,6 @@ categories: [notes]
 tags: [rails, ruby]
 ---
 
-# Ruby on Rails Notes
-
 ## Rails related links
  * [Rails Website](https://rubyonrails.org/)
  * [Rails Documentation](https://api.rubyonrails.org/)
