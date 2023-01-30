@@ -5,7 +5,6 @@ categories: [misc]
 tags: [test]
 ---
 
-# First Post
 
 ## This is the first post on this website
 
