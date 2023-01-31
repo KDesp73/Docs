@@ -20,6 +20,6 @@ public static void main(String args[]){
 
 ## Links
 
-* [First Portfolio](https://kdesp73.github.io/My-Portfolio/)
-* [Second Portfolio](https://users.iee.ihu.gr/~iee2021035/my-portfolio/)
+* [Latest Portfolio](https://kdesp73.github.io/Portfolio/)
+* [Repo](https://github.com/KDesp73/Docs/)
 
