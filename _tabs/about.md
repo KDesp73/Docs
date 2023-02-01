@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-<h1>Hi !👋 My name is Konstantinos Despoinidis</h1>
+## My name is Konstantinos Despoinidis
 
-<h4>I am a student at IEE | IHU</h4>
+#### I am a student at IEE | IHU
 
 🌍  I'm based in Thessaloniki<br>
 🖥️  See my portfolio at [MyPortfolio](http://users.iee.ihu.gr/~iee2021035/my-portfolio/)<br>
