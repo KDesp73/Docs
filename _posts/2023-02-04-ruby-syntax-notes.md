@@ -137,7 +137,7 @@ end
 ### Adding element to an existing hash
 
 ```ruby
-hash {"One" => 1, "Two" => 2}
+hash = {"One" => 1, "Two" => 2}
 
 hash.merge!("Three" => 3)
 ```
@@ -148,7 +148,6 @@ hash.merge!("Three" => 3)
 (10..15).each do |n|
    print n, ' '
 end
-puts ""
 ```
 
 ## Comments
