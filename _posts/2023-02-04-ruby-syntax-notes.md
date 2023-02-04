@@ -52,7 +52,7 @@ class Vehicle
         # code
     end
 
-    def drivingend
+    def driving
         # code
     end
 
