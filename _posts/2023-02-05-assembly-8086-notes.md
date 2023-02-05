@@ -145,7 +145,6 @@ sub ch, 11h ; now ch = 11h
 * Zero Flag: Set to 1 when result is zero, else it is set to 0
 * Sign Flag: Set to 1 when the result is negative, else it is set to 0
 
-
 ### Example
 
 ```x86asm
