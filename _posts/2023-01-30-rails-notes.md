@@ -16,7 +16,7 @@ tags: [rails, ruby]
 * rails new [project_name] - Create new Rails Project
 * rails s - start localhost server
 * bundle - bundle all the gems in the Gemfile
-* rails c - open the rails server terminal 
+* rails c - open the rails server terminal
 * rails generate migration [options]
 * rake db:migrate
 
