@@ -1,6 +1,6 @@
 ---
 title: Assembly 8086 Notes
-date: 2023-02-05 02:47:00 -200
+date: 2023-02-04 02:47:00 -200
 categories: [notes] 
 tags: [assembly, assembly-8086]
 ---
