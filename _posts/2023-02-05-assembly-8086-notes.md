@@ -1,6 +1,6 @@
 ---
 title: Assembly 8086 Notes
-date: 2023-02-04 02:47:00 -200
+date: 2023-02-05 02:47:00 -200
 categories: [notes] 
 tags: [assembly, assembly-8086]
 ---
@@ -38,13 +38,13 @@ Memory slots used to store data
 
 ### Examples
 
-```x86asm
+```assembly
 a db 9
 message db 'hello world'
 var dw 1122h    ; hexadecimal value
 ```
 
-```x86asm
+```assembly
 string db "lorem ipsum", '$'    ; '$' for end of string
 string1 db 10, 13, "lorem ipsum", '$'  ; 10,13 for new line
 ```
@@ -53,11 +53,11 @@ string1 db 10, 13, "lorem ipsum", '$'  ; 10,13 for new line
 
 ### Declaration
 
-```x86asm
+```assembly
 a db 1h, 2h, 3h, 7h     ; int a[] = {1, 2, 3, 7}
 ```
 
-```x86asm
+```assembly
 ; Store a value from an array to the al register
 mov al, a[2]
 
@@ -68,7 +68,7 @@ mov al, a[si]
 
 ### Array Declaration using DUP
 
-```x86asm
+```assembly
 x db 3 dup(7)
 
 ; same as
@@ -76,7 +76,7 @@ x db 3 dup(7)
 x db 7, 7, 7
 ```
 
-```x86asm
+```assembly
 y db 3 dup(5, 6)
 
 ; same as
@@ -86,7 +86,7 @@ y db 5, 6, 5, 6, 5, 6
 
 ### Declaring an empty array
 
-```x86asm
+```assembly
 var db 10 dup(?)    ; int var[10] = {0}
 ```
 
@@ -94,13 +94,13 @@ var db 10 dup(?)    ; int var[10] = {0}
 
 It copies the second operand, called source, to the first operand called destination
 
-```x86asm
+```assembly
 mov ax, 7
 ```
 
 ### Types of operands supported
 
-```x86asm
+```assembly
 ;reg: ax, bx, ah, al, ch, cl, cx, di...etc
 ;immediate: 7, -11, 4fh...etc
 ;memory: [bx] or [bx+si] + displacement
@@ -120,7 +120,7 @@ Combination of bx, si, di, bp registers inside of [] can be used to access memor
 
 ## ADD
 
-```x86asm
+```assembly
 mov ax, 11h
 mov bx, 14h
 add ax, bx  ; ax = 25h
@@ -130,7 +130,7 @@ The result is stored in the destination (first register)
 
 ## SUB
 
-```x86asm
+```assembly
 mov ch, 23h
 sub ch, 11h ; now ch = 11h
 ```
@@ -147,7 +147,7 @@ sub ch, 11h ; now ch = 11h
 
 ### Example
 
-```x86asm
+```assembly
 mov ch, 12h
 sub ch, 24h
 ```
@@ -156,7 +156,7 @@ Flags: Z = 0 (result not zero), C = 1 (carry), S = 1 (result negative)
 
 ## MUL
 
-```x86asm
+```assembly
 mov al, 7h
 mov bl, 7h
 
