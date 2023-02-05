@@ -162,3 +162,5 @@ mov bl, 7h
 
 mul bl
 ```
+
+>[MD file](https://github.com/KDesp73/Docs/blob/main/_posts/2023-02-05-assembly-8086-notes.md)
