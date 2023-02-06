@@ -333,4 +333,9 @@ rol ax, cl ; requires immidiate 8 bit operand or the cl register as the shift co
 
 * `ror` - Rotates the bits from the back to the front
 
+```armasm
+mov cx, 7h
+ror ax, cl ; requires immidiate 8 bit operand or the cl register as the shift count
+```
+
 >[MD file](https://github.com/KDesp73/Docs/blob/main/_posts/2023-02-05-assembly-8086-notes.md)
