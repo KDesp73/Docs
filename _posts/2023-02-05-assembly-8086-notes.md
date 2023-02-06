@@ -5,6 +5,8 @@ categories: [notes]
 tags: [assembly, assembly-8086]
 ---
 
+>The code snippets are in armasm because x86asm wouldn't render. So ignore the syntax errors.
+
 ## Registers
 
 Memory slots used to store data
@@ -197,5 +199,138 @@ div bl
 
 It's used for unsigned numbers
 
+## Logical Intructions
+
+* AND
+* OR
+* XOR
+* NOT
+* TEST
+
+### Using AND to determine if a number is even or odd
+
+*It changes the value of the al register*
+
+```armasm
+mov al, 8h
+and al, 01h
+```
+
+0000 1000 <br>
+0000 0001 <br>
+===AND=== <br>
+0000 0000
+
+So the number is even
+
+```armasm
+mov al, 5h
+and al, 01h
+```
+
+0000 0101 <br>
+0000 0001 <br>
+===AND=== <br>
+0000 0001
+
+So the number is odd
+
+### TEST
+
+Like AND
+
+*It does not change the value of the al register*
+
+```armasm
+mov al, 7h
+test al, 01h
+;  affects the flag
+```
+
+>The other operands work as expected
+
+## Program Control Flow
+
+### Jumps
+
+jmp, je, jle, jne, jz, jnz, ja, jb, jc
+
+#### Unconditional Jumps
+
+They transfer control to another part of the program
+
+Sample code
+
+```armasm
+jmp read ;jump to read label
+```
+
+```armasm
+read: 
+    mov ah, 01
+    jmp exit
+
+exit:
+    mov ah, 4ch
+    int 21h
+```
+
+#### Conditional Jumps
+
+* Jump only when some condition is satisfied
+* Most jumps work by affecting CPU FLAGs while jumps like jcxz depend on the register
+
+ `je` and `jz` - Jump when ZERO flag is equal to 1. They are more appropriate when you check whether something is 0 or not
+
+ `jne` and `jnz` - Jump when ZERO flag is 0. They are mostly used after a cmp instruction
+
+`ja` and `jg` - Jump if above jump is greater
+
+`ja` - Jump if CF = 0 and ZF = 0
+
+`jg` - Jump if SF = OF and ZF = 0
+
+`jb` - Jump if CF = 1
+
+`jc` - Jump if CF = 1
+
+`jcxz` - Jump id CX register is zero
+
+### Instructions
+
+* `inc` - Adds 1 to any register
+* `dec` - Subtracts 1 from any register
+* `cmp` - subtract source form destination and set the flags appropriately
+
+```armasm
+inc ax
+dec bx
+cmp al, 10h
+```
+
+### Bit Manipulation
+
+* `shl` - Shifts bits of byte to the left.
+
+```armasm
+shl al, 1 ; shift al by 1 (use cl register if it's more than 1)
+```
+
+* `shr` - Shifts bits of byte to the right
+
+```armasm
+shr al, 1 ; shift al by 1 (use cl register if it's more than 1)
+```
+
+* `rol` - Rotates the bits from the front to the back
+
+![rol](https://user-images.githubusercontent.com/63654361/216864072-7f49eef8-f1ed-4746-a409-586d3bf47fe9.png)
+
+```armasm
+mov cx, 7h
+rol ax, cl ; requires immidiate 8 bit operand or the cl register as the shift count
+```
+
+* `ror` - Rotates the bits from the back to the front
 
 >[MD file](https://github.com/KDesp73/Docs/blob/main/_posts/2023-02-05-assembly-8086-notes.md)
