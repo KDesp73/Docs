@@ -93,7 +93,7 @@ tags: [java, java-swing, library, maven]
 <dependency>
     <groupId>kdesp73.themeLib</groupId>
     <artifactId>SwingThemesLibrary</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 </dependency>
 ```
 
