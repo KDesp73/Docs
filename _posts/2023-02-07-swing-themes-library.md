@@ -1,6 +1,6 @@
 ---
 title: Swing Themes Library
-date: 2023-02-06 01:20:00 -200
+date: 2023-02-06 01:20:00 +0200
 categories: [documentation] 
 tags: [java, java-swing, library, maven]
 ---

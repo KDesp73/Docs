@@ -1,6 +1,6 @@
 ---
 title: Ruby Web Server
-date: 2023-02-02 04:38:00 -200
+date: 2023-02-02 04:38:00 +0200
 categories: [documentation] 
 tags: [ruby, server]
 ---

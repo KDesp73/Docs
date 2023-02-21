@@ -1,6 +1,6 @@
 ---
 title: First Post
-date: 2023-01-30 11:00:00 -200
+date: 2023-01-30 11:00:00 +0200
 categories: [misc]
 tags: [test]
 ---
