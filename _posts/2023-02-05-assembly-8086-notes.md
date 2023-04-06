@@ -339,3 +339,27 @@ ror ax, cl ; requires immidiate 8 bit operand or the cl register as the shift co
 ```
 
 >[MD file](https://github.com/KDesp73/Docs/blob/main/_posts/2023-02-05-assembly-8086-notes.md)
+
+
+## Standard code snippets
+
+### Assume segment registers
+
+```armasm
+assume cs: code, ds: data
+```
+
+### Initalize ds
+
+```armasm
+mov ax, data
+mov ds, ax
+```
+
+### Return control to OS
+
+```armasm
+mov ah, 4ch
+int 21h
+```
+
