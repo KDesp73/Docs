@@ -1,6 +1,6 @@
 ---
 title: Ruby Syntax Notes
-date: 2023-02-04 11:08:00 -200
+date: 2023-02-04 11:08:00 +0200
 categories: [notes] 
 tags: [ruby]
 ---

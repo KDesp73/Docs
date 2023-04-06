@@ -1,11 +1,16 @@
 ---
 title: Assembly 8086 Notes
-date: 2023-02-05 02:47:00 -200
+date: 2023-02-05 02:47:00 +0200
 categories: [notes] 
 tags: [assembly, assembly-8086]
 ---
 
 >The code snippets are in armasm because x86asm wouldn't render. So ignore the syntax errors.
+
+## Emu8086
+
+* [Download](https://en.lo4d.com/s/emu8086)
+* [License key](https://users.iee.ihu.gr/~iee2021035/emu8086_license_key.txt)
 
 ## Registers
 

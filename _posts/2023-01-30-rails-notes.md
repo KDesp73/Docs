@@ -1,6 +1,6 @@
 ---
 title: Ruby on Rails Notes
-date: 2023-01-30 12:25:00 -200
+date: 2023-01-30 12:25:00 +0200
 categories: [notes] 
 tags: [rails, ruby]
 ---
