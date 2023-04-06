@@ -368,3 +368,25 @@ mov ah, 4ch
 int 21h
 ```
 
+## Software interrupts
+
+> Before int 21h
+
+1. "Terminate program" - AH = 4Ch (76 decimal)
+2. "Display string" - AH = 09h (9 decimal)
+3. "Read keyboard input" - AH = 01h (1 decimal)
+4. "Write character to standard output" - AH = 02h (2 decimal)
+5. "Get system date" - AH = 2Ah (42 decimal)
+6. "Get system time" - AH = 2Ch (44 decimal)
+7. "Create a new file" - AH = 3Ch (60 decimal)
+8. "Open an existing file" - AH = 3Dh (61 decimal)
+9. "Close a file" - AH = 3Eh (62 decimal)
+10. "Read data from a file" - AH = 3Fh (63 decimal)
+11. "Write data to a file" - AH = 40h (64 decimal)
+12. "Delete a file" - AH = 41h (65 decimal)
+13. "Rename a file" - AH = 56h (86 decimal)
+14. "Get current disk drive" - AH = 19h (25 decimal)
+15. "Set disk transfer area address" - AH = 1Dh (29 decimal)
+16. "Get system time count" - AH = 2Dh (45 decimal)
+17. "Set system time" - AH = 25h (37 decimal)
+18. "Get current default drive" - AH = 19h, DL = 0 (25 decimal, DL = 0)
