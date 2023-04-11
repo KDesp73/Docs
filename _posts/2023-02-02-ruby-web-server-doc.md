@@ -5,7 +5,7 @@ categories: [documentation]
 tags: [ruby, server]
 ---
 
-## A simple functional server made with pure Ruby
+## A simple functional server made with pure Ruby.
 
 *It can host static websites*
 
@@ -13,29 +13,29 @@ tags: [ruby, server]
 
 ## Requirements
 
-* Ruby 3.0.0 minimum
+* Ruby 2.7.0 minimum
 
 ## How to use it
 
-1. Clone this [repository](https://github.com/KDesp73/Ruby-Web-Server)
+1. Clone this repository
 
     ```bash
     git clone https://github.com/KDesp73/Ruby-Web-Server
-    ```  
+    ```
+   
+2. Run `bundle install` to install the necessary gems
+    
+3. Add your static site in the `docs/` folder
 
-2. Add your static site in the `docs/` folder
-
-3. In selected directory run: 
+4. In selected directory run: 
 
     ```bash
     ruby ./server.rb
-    ```  
-
+    ```
     The server is now running on localhost:2000
 
-4. Change the configuration from the 'config.yml' file if neccessary
+5. Change the configuration from the 'config.yml' file if necessary
 
-## TODO
+## Licence
 
-* Host multiple sites
-* Host dynamic sites with full PHP functionality
+[MIT](https://github.com/KDesp73/Ruby-Web-Server/blob/main/LICENSE)
