@@ -36,6 +36,32 @@ Memory slots used to store data
 
 > All general purpose registers are 16 bit
 
+In the 8086 assembly language, there are several registers, each serving a specific purpose. Here's a brief description of each register and its typical usage:
+
+    General-Purpose Registers:
+        AX (Accumulator): Used for arithmetic and data manipulation. It is also involved in some multiplication and division operations.
+        BX (Base): Often used as a pointer to data or an offset in memory addressing.
+        CX (Count): Primarily used as a loop counter in iterative operations.
+        DX (Data): Like AX, it is used for arithmetic operations and sometimes holds the high-order bits of the result.
+
+    Segment Registers:
+        CS (Code Segment): Points to the current code segment.
+        DS (Data Segment): Points to the data segment where program variables are stored.
+        SS (Stack Segment): Points to the stack segment, which holds the program stack.
+        ES (Extra Segment): Used to store additional data segment addresses.
+
+    Index and Pointer Registers:
+        SI (Source Index): Typically used as a pointer to the source data in string operations.
+        DI (Destination Index): Usually used as a pointer to the destination in string operations.
+        BP (Base Pointer): Frequently used to access function parameters and variables stored on the stack.
+        SP (Stack Pointer): Points to the top of the stack and is involved in managing the stack.
+
+    Flags Register:
+        FLAGS: Contains various status flags indicating the outcome of arithmetic and logical operations, as well as control flags for branching and looping.
+
+These registers are fundamental to 8086 assembly programming, and their usage may vary depending on the specific requirements of a program.
+
+
 ## Data Types
 
 * db - Define Byte
@@ -365,6 +391,23 @@ mov ds, ax
 
 ```armasm
 mov ah, 4ch
+int 21h
+```
+
+### Print string
+
+```armasm
+lea dx, msg
+mov ah, 9
+int 21h
+```
+
+### Print integer
+
+```armasm
+mov dl, int
+add dl, 48
+mov ah, 2
 int 21h
 ```
 
