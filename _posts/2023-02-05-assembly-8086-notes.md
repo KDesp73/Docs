@@ -411,6 +411,25 @@ mov ah, 2
 int 21h
 ```
 
+### Get integer / character input
+
+> Gets the ascii value
+
+```armasm
+mov ah, 8h
+int 21h
+```
+
+### Get integer / character input and print it
+
+> Gets the ascii value
+
+```armasm
+mov ah, 1
+int 21h
+```
+
+
 ## Software interrupts
 
 > Before int 21h
