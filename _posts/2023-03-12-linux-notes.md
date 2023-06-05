@@ -1,90 +1,216 @@
 ---
-title: Linux Notes
-date: 2023-03-12 22:00:00 +0200
+title: Bash Notes
+date: 2023-06-06 02:23:00 +0200
 categories: [notes]
-tags: [linux, shell]
+tags: [linux, shell, Bash]
 ---
 
-## Lab 1
 
-```shell
-whoami
+## echo
+
+```bash
+echo "Hello World with new line"
 ```
 
-```shell
-echo "Hello World"
+```bash
+echo -n "Hello World without new line"
 ```
 
-### Seperator
+## while
 
-```shell
-whoami ; cal 2021
+```bash
+while [ $bool ] do
+
+# ...Code...
+
+done
+
 ```
 
-### Arguments
+## for
 
-General syntax
+```bash
+for (( i = 0; i < 10; i++ )) do
 
-```shell
-cmd_name agrs file_names
+# ...Code...
+
+done
 ```
 
-Example
+## if
 
-```shell
-ls –l –a /tmp
+```bash
+if [ $bool ] ; then
+    # Do something
+elif [ $other_bool ] ; then
+    # Do something else
+else
+    # Do something else
+fi
 ```
 
-* One letter arguments `-l`
-* Word arguments `--version`
+## Take input
 
-`-la` == `-l -a`
-
-`-all` != `--all`
-
-`man cmd_name` lists all the use cases of the selected command with a description
-
-`stat [file/dir]` gives information about the file/dir
-
-```shell
-man ls
+```bash
+read a
+echo $a
 ```
 
-### Directory / File Management
+## Arguments
 
-| Command | Arguments                       | Description                               |
-|---------|---------------------------------|-------------------------------------------|
-| mkdir   | [dir_name]                      | Create a directory                        |
-| rmdir   | [dir_name]                      | Remove a directory                        |
-| cp      | [-i] [-f] [-r] [src/dest]       | Copy files or directories                 |
-| mv      | [-i] [-f] [src] [dest]          | Rename / Move files or directories        |
-| rm      | [-i] [-f] [-r] [file/dir names] | Deletes files or directories              |
-| cd      | [dir_name]                      | Change directory to argument              |
-| ls      | [-l] [-a] [dir names]           | List directory contents                   |
-| pwd     |                                 | print current absolute path               |
-| cat     | [file_name]                     | print file contents                       |
-| more    | [file_name]                     | Print file contents partialy              |
-| head    | [-number] [file_name]           | Print first [number] rows of file         |
-| tail    | [-number] [file_name]           | Print last [number] rows of file          |
-| touch   | [file_name]                     | Create an empty file in current directory |
+Number of arguments: `$#`
 
-### Home variable
+Nth Argument: `$n` (n = [1-9])
 
-```shell
-echo ~
+## Functions
+
+```bash
+function name(){
+
+}
 ```
 
-```shell
-echo ~root
+## Read a file
+
+```bash
+file = "book.txt"
+
+while read line; do
+    echo $line
+done < $file
+
 ```
 
-```shell
-echo $HOME
+## Read a directory
+
+```bash
+for i in [dir]/* ; do
+    echo "$i"
+done
 ```
 
-`$HOME` is an environment variable
+## if tests
 
-`~` is the abbriviation for `$HOME`
+```bash
+arg = $1
 
-`~username` gives us the absolute path of user's home directory
+if [ -e $arg ] ; then 
+    echo "$arg exists"
+fi
+
+if [ -f $arg ] ; then
+    echo "$arg is a file"
+elif [ -d $arg ] ; then
+    echo "$arg is a directory"
+else
+    echo "$arg is something else"
+fi
+```
+
+```bash
+if [ $# -ne 1 ] ; then
+    echo "I need only one argument" 1>&2
+    exit 1;
+fi
+
+if [ ! -f $1 ] ; then
+    echo "Argument is not a file" 1>&2
+    exit 2;
+```
+
+## sleep
+
+```bash
+echo "Wait for 5 seconds"
+sleep 5
+echo "Done"
+```
+
+## cut
+
+cut -d [seperation_character] -f[field_num]
+
+```bash
+cut -d " " -f1
+```
+
+## sort
+
+* [expression] | sort -k[num] -t [char]
+
+Sort the lines of the output of the [expression] based on the [num] field after sererating them based on the [char]
+
+## uniq
+
+Before `uniq` always sort
+
+Removes concurrent duplicate lines
+
+`-c` adds  a prefix of the number of occurences
+
+```bash
+ls | sort | uniq -c
+```
+
+## tr
+
+* tr [first_set] [second_set]
+
+Replaces the first set of characters with the second one
+
+```bash
+tr [:lower:] [:upper:]
+```
+
+* tr -s [character]
+
+Replace each sequence of a repeated character that is  listed  in  the  last specified SET, with a single occurrence of that character
+
+```bash
+tr -s " "
+```
+
+## Inline code
+
+a=`[command]`
+
+The result of the [command] goes into the variable `a`
+
+## head
+
+[expression] | head -n[num]
+
+Print the first [num] of lines of the [expression]'s output
+
+## tail
+
+[expression] | tail -n[num]
+
+Print the last [num] of lines of the [expression]'s output
+
+## Error message
+
+echo [message] 1>&2;
+exit [num!=0]
+
+```bash
+if [ $# -ne 1 ] ; then
+    echo "One argument needed" 1>&2;
+    exit 1
+fi
+```
+
+## egrep
+
+egrep [options] PATTERN [FILE...]
+
+### Options
+
+`-v` reverse of the pattern
+
+`--color` adds color to matches
+
+`-c` count the number of matches
+
+`-i` ignores case
 
