@@ -1,6 +1,6 @@
 ---
 title: Bash Notes
-date: 2023-06-06 02:23:00 +0200
+date: 2023-06-05 02:23:00 +0200
 categories: [notes]
 tags: [linux, shell, Bash]
 ---
@@ -73,7 +73,7 @@ function name(){
 ## Read a file
 
 ```bash
-file = "book.txt"
+file="book.txt"
 
 while read line; do
     echo $line
