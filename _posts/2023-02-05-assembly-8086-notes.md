@@ -377,7 +377,7 @@ ror ax, cl ; requires immidiate 8 bit operand or the cl register as the shift co
 ### Assume segment registers
 
 ```armasm
-assume cs: code, ds: data
+assume cs: code, ds: data, ss:stack
 ```
 
 ### Initalize ds
@@ -452,3 +452,117 @@ int 21h
 16. "Get system time count" - AH = 2Dh (45 decimal)
 17. "Set system time" - AH = 25h (37 decimal)
 18. "Get current default drive" - AH = 19h, DL = 0 (25 decimal, DL = 0)
+
+## Processes
+
+```armasm
+[name] proc
+    ...
+    ...
+    ...
+    ret
+[name] endp
+```
+
+## Template file
+
+```armasm
+title [title]
+
+assume cs:code, ds:data, ss:stack
+
+stack segment stack
+    db 256 dup(0)
+stack ends
+
+data segment
+    ; data
+data ends
+
+code segment
+main proc near
+    mov ax, data
+    mov ds, ax
+
+
+    mov ah, 4ch
+    int 21h
+main endp
+code ends
+
+end main
+```
+
+## Printing numbers
+
+### 2 digits
+
+```armasm
+print_two_digit_num proc
+    push bx
+    push cx
+
+    ; assuming number is in ax
+    mov cl, 10
+    div cl      ; ax / cl -> ah, al
+    
+    mov bx, ax
+
+    mov dl, bl  
+    add dl, 48 
+    mov ah, 2 
+    int 21h
+    
+    mov dl, bh 
+    add dl, 48 
+    mov ah, 2 
+    int 21h
+
+    pop bx
+    pop cx
+    ret
+print_two_digit_num endp
+```
+
+### 3 digits
+
+```armasm
+print_three_digit_num proc
+    push bx
+    push cx
+
+    mov cl, 100
+    div cl
+
+    mov bx, ax
+
+    mov dl, bl
+    add dl, '0'
+    mov ah, 2h
+    int 21h
+    
+    xchg bl, bh
+    mov bh, 0
+    mov ax, bx
+
+    mov cl, 10
+    div cl
+
+    mov bx, ax
+
+    mov dl, bl
+    add dl, '0'
+    mov ah, 2h
+    int 21h
+
+    mov dl, bh
+    add dl, '0'
+    mov ah, 2h
+    int 21h
+
+    pop bx
+    pop cx
+
+    ret
+print_three_digit_num endp
+```
