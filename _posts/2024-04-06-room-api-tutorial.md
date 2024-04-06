@@ -5,6 +5,41 @@ categories: [tutorial]
 tags: [kotlin, android, room-api, db]
 ---
 
+## Dependencies
+
+### build.gradle.kts (root)
+
+```kotlin
+plugins {
+  ...
+  id("com.google.devtools.ksp") vesion "1.9.0-1.0.13" apply false
+  ...
+}
+```
+### build.gradle.kts (module)
+
+```kotlin
+plugins {
+  ...
+  id("com.google.devtools.ksp")
+  ...
+}
+
+dependencies {
+  val roomVersion = "2.6.1"
+  implementation("androidx.room:room-runtime:$roomVersion")
+  ksp("androidx.room:room-compiler:$roomVersion") // IMPORTANT
+
+  implementation("androidx.room:room-ktx:$roomVersion")
+  implementation("androidx.room:room-rxjava2:$roomVersion")
+  implementation("androidx.room:room-rxjava3:$roomVersion")
+  implementation("androidx.room:room-guava:$roomVersion")
+  testImplementation("androidx.room:room-testing:$roomVersion")
+  implementation("androidx.room:room-paging:$roomVersion")
+}
+```
+
+
 ## Database Abstract class
 
 ```kotlin
