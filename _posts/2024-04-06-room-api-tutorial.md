@@ -38,7 +38,7 @@ data class User (
   @ColumnInfo(name = "gender") var gender: String = "Other"
 ) {
   // .. other constructors / methods .. 
-  }
+}
 ```
 
 ## Define the DAO (Data Access Object)
@@ -70,4 +70,13 @@ val room = Room.databaseBuilder(
 ).allowMainThreadQueries() // To allow queries on the main thread
   .fallbackToDestructiveMigration() // Clear the database if no migration is defined
   .build()
+```
+
+## Usage
+
+```kotlin
+val userDao = room.userDao()
+val emails = userDao.getEmails();
+
+userDao.insertUser(User(...))
 ```
