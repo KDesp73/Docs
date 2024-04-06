@@ -2,7 +2,7 @@
 title: Bash Notes
 date: 2023-06-05 02:23:00 +0200
 categories: [notes]
-tags: [linux, shell, Bash]
+tags: [linux, shell, bash]
 ---
 
 
