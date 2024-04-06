@@ -21,7 +21,7 @@ timezone: Europe/Athens
 
 title: My Docs                          # the main title
 
-tagline: Documentation for various projects   # it will display as the sub-title
+tagline: Documentation, Notes and Tutorials for various topics   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A Docs site for my Projects
