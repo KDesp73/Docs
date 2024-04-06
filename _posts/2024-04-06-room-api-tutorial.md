@@ -1,6 +1,6 @@
 ---
-title: First Post
-date: 2023-01-30 11:00:00 +0200
+title: Room Api (Kotlin)
+date: 2024-04-06 20:22:00 +0200
 categories: [tutorial]
 tags: [kotlin, android, room-api, db]
 ---
