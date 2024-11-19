@@ -22,7 +22,7 @@ Navigate to your [account](https://central.sonatype.com/account) and click `Gene
 Run the following command
 
 ```bash
-$ mvn --encrypt-master-password
+mvn --encrypt-master-password
 ```
 
 Enter a master password and the output should look something like the following
@@ -45,7 +45,7 @@ If not already installed, install gnupg in your system
 ### Generate GPG Key
 
 ```bash
-$ gpg --full-generate-key
+gpg --full-generate-key
 ```
 
 You will be prompted to provide the following information:
@@ -243,7 +243,11 @@ The following are taken from my [DataBridge](https://github.com/KDesp73/DataBrid
 ## Step 6: Deploy your package
 
 ```bash
-$ mvn clean verify
+mvn clean verify
 
-$ mvn clean deploy
+mvn clean deploy
 ```
+
+That's it! Your package should be published at any moment.
+
+For more info on publishing using sonatype checkout their [documentation](https://central.sonatype.org/publish/publish-portal-maven/)
