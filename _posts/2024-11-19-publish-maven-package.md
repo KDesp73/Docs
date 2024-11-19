@@ -35,7 +35,6 @@ Create the `~/.m2/settings-security.xml` file and write the following xml
 <settingsSecurity>
     <master>hashed-password</master>
 </settingsSecurity>
-
 ```
 
 ## Step 3: Create a gpg key for signing
@@ -110,7 +109,6 @@ Create the `~/.m2/settings.xml` file and add the following xml
         <activeProfile>gpg</activeProfile>
     </activeProfiles>
 </settings>
-
 ```
 
 `your-secure-passphrase` can be encrypted using `mvn`
