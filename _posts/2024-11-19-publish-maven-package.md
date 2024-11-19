@@ -15,7 +15,7 @@ Visit [central.sonatype.com](https://central.sonatype.com/) and follow the appro
 
 Navigate to your [account](https://central.sonatype.com/account) and click `Generate User Token`
 
-![token-image](/assets/token/step.png)
+![token-image](/assets/token-step.png)
 
 ## Step 2: Set-up settings-security.xml
 
