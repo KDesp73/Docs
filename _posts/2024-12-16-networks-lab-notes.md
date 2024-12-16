@@ -11,6 +11,7 @@ tags: [networks, school]
 - [DNS Watch](https://dnswatch.info)
 - [Google Dig](https://toolbox.googleapps.com/apps/dig/)
 - [Dig](https://www.digwebinterface.com/)
+- [Hex Packet Decoder](https://hpd.gasmi.net/)
 
 ## Ενότητα 1
 
@@ -69,6 +70,7 @@ arp -a <host>
 
 | Φίλτρο | Περιγραφή |
 |--------|-----------|
+| `dns` | Πακέτα που αφορούν το προτόκολλο DNS |
 | `ip.addr == 192.168.1.1` | Πακέτα από ή πρός τη διεύθυνση IP 192.168.1.1 |
 | `tcp.port == 443` | Πακέτα μέσω της θύρας 443 |
 | `udp` | Μόνο UDP πακέτα |
@@ -76,4 +78,8 @@ arp -a <host>
 | `http.request.method == "GET"` | Αιτήματα HTTP GET |
 | `frame.len > 1000` | Πακέτα με μέγεθος μεγαλύτερο απο 1000 bytes |
 | `ip.src == 192.168.1.1 && tcp.flags.syn == 1` | SYN πακέτα από συγκεκριμένη IP |
+
+### Σύγκριση χαρακτηριστικών των προτοκόλλων
+
+![protocol-comparison](assets/protocol-comparison.pgn "Protocol Comparison")
 
