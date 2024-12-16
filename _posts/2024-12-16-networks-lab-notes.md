@@ -12,6 +12,8 @@ tags: [networks, school]
 - [Google Dig](https://toolbox.googleapps.com/apps/dig/)
 - [Dig](https://www.digwebinterface.com/)
 - [Hex Packet Decoder](https://hpd.gasmi.net/)
+- [Subnet Calculator](https://www.calculator.net/ip-subnet-calculator.html)
+- [Υποδικτύωση](https://www.davidc.net/sites/default/subnets/subnets.html)
 
 ## Ενότητα 1
 
@@ -83,3 +85,6 @@ arp -a <host>
 
 ![protocol-comparison](/assets/protocol-comparison.png "Protocol Comparison")
 
+## Ενότητα 3
+
+![network-masks](/assets/network-masks.png "Network Masks")
