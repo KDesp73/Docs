@@ -103,3 +103,7 @@ arp -a <host>
 ## Ενότητα 3
 
 ![network-masks](/assets/network-masks.png "Network Masks")
+
+### Static Routing
+
+![static-routing](/assets/static_routing.png "Static Routing in CPT")
