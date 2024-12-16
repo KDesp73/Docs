@@ -44,7 +44,7 @@ tracert <domain | IPv4>
 
 ### TCP Protocol Stack
 
-![tcp-protocol-stack](./assets/tcp-protocol-stack.png "TCP Protocol Stack")
+![tcp-protocol-stack](/assets/tcp-protocol-stack.png "TCP Protocol Stack")
 
 ### DNS
 
