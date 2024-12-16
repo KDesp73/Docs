@@ -12,6 +12,9 @@ tags: [networks, school]
 - [Google Dig](https://toolbox.googleapps.com/apps/dig/)
 - [Dig](https://www.digwebinterface.com/)
 - [Hex Packet Decoder](https://hpd.gasmi.net/)
+- [BIND Download](https://downloads.isc.org/isc/bind9/9.16.7/BIND9.16.7.x64.zip)
+- [Hex Packet Decoder](https://hpd.gasmi.net/)
+- [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 ## Ενότητα 1
 
@@ -49,7 +52,11 @@ tracert <domain | IPv4>
 
 ### DNS
 
-- Θύρα 53
+- Θύρα 53 (Με πάντα UDP πρωτόκολλο)
+
+Για καθαρισμό του DNS cache:
+- Windows: `ipconfig /flushdns`
+- Linux: `sudo system-resolve –flush-caches` 
 
 #### Records
 
@@ -68,6 +75,8 @@ arp -a <host>
 
 ### Wireshark
 
+#### Φίλτρα
+
 | Φίλτρο | Περιγραφή |
 |--------|-----------|
 | `dns` | Πακέτα που αφορούν το προτόκολλο DNS |
@@ -78,6 +87,12 @@ arp -a <host>
 | `http.request.method == "GET"` | Αιτήματα HTTP GET |
 | `frame.len > 1000` | Πακέτα με μέγεθος μεγαλύτερο απο 1000 bytes |
 | `ip.src == 192.168.1.1 && tcp.flags.syn == 1` | SYN πακέτα από συγκεκριμένη IP |
+
+Για περισσότερα στην [εδώ](https://wiki.wireshark.org/DisplayFilters)
+
+#### Follow TCP packet
+
+![wireshark_follow_tcp](/assets/wireshark_follow_tcp.png "Follow TCP packet")
 
 ### Σύγκριση χαρακτηριστικών των προτοκόλλων
 
