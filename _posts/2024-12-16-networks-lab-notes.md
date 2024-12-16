@@ -81,5 +81,5 @@ arp -a <host>
 
 ### Σύγκριση χαρακτηριστικών των προτοκόλλων
 
-![protocol-comparison](assets/protocol-comparison.pgn "Protocol Comparison")
+![protocol-comparison](/assets/protocol-comparison.pgn "Protocol Comparison")
 
