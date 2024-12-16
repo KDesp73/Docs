@@ -13,8 +13,10 @@ tags: [networks, school]
 - [Dig](https://www.digwebinterface.com/)
 - [Hex Packet Decoder](https://hpd.gasmi.net/)
 - [BIND Download](https://downloads.isc.org/isc/bind9/9.16.7/BIND9.16.7.x64.zip)
-- [Hex Packet Decoder](https://hpd.gasmi.net/)
 - [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [Subnet Calculator](https://www.calculator.net/ip-subnet-calculator.html)
+- [Υποδικτύωση](https://www.davidc.net/sites/default/subnets/subnets.html)
+
 
 ## Ενότητα 1
 
@@ -96,5 +98,8 @@ arp -a <host>
 
 ### Σύγκριση χαρακτηριστικών των προτοκόλλων
 
-![protocol-comparison](/assets/protocol-comparison.pgn "Protocol Comparison")
+![protocol-comparison](/assets/protocol-comparison.png "Protocol Comparison")
 
+## Ενότητα 3
+
+![network-masks](/assets/network-masks.png "Network Masks")
