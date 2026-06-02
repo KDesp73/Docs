@@ -1,0 +1,10 @@
+:root {
+	--sl-font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+.content img[align='center'],
+.content .center {
+	display: block;
+	margin-inline: auto;
+	text-align: center;
+}
