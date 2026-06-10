@@ -23,8 +23,24 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'About', slug: 'about' },
 				{
-					label: 'Posts',
-					items: [{ autogenerate: { directory: 'posts', collapsed: true } }],
+					label: 'Notes',
+					items: [{ autogenerate: { directory: 'posts/notes', collapsed: true } }],
+				},
+				{
+					label: 'Documentation',
+					items: [{ autogenerate: { directory: 'posts/documentation', collapsed: true } }],
+				},
+				{
+					label: 'Tutorials',
+					items: [{ autogenerate: { directory: 'posts/tutorials', collapsed: true } }],
+				},
+				{
+					label: 'Papers',
+					items: [{ autogenerate: { directory: 'posts/papers', collapsed: true } }],
+				},
+				{
+					label: 'Misc',
+					items: [{ autogenerate: { directory: 'posts/misc', collapsed: true } }],
 				},
 			],
 			lastUpdated: true,
